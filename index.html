@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>отзывы</title>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery.uploadPreview.min.js"></script>
+    <section class="tab">
+        <div class="tabs">
+            <div class="caption-wrapper">
+                <ul class="tabs__caption">
+                <li class="active"><div class="tab_button ">ОТЗЫВЫ (5)</div></li>
+                <li><div class="tab_button">ВОПРСЫ (3)</div></li>
+                </ul>
+                <div class="sort-buttons">
+                    <div class="sort-1">сортировать по:</div>
+                    <div class="sort-links-wrapper">
+                        <a href="#" class="sort-2"><div class="date-">Дате</div></a>
+                        <a href="#" class="sort-3"><div>Оценке</div></a>
+                        <a href="#" class="sort-4"><div>Полезности</div></a>
+                    
+                    <div class="policy footer__policy">
+                        <input type="checkbox" name="policyCheckbox" id="policy-checkbox-footer" class="policy__checkbox" checked="">
+                        <label for="policy-checkbox-footer" class="policy__lable">
+                          <div class="label__footer">
+                           Фото
+                        </div>
+                     </label>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="button-form-wrapper">
+            <div class="form-call-button form-bottom">
+                <a data-fancybox="form" data-src="#form" class="btn-fr call-btn" href="javascript:;">Написать отзыв</a>
+            </div>
+          </div>
+<div id="form" style="display: none;">
+    <form action="" method="POST" action="" id="main-form">
+            <form>
+                 <div class="modal-title">НАПИШИТЕ СВОЙ ОТЗЫВ</div>
+                 <div class="label">Ваши контакты</div>
+                 <input class="contact first-inp" type="text" placeholder="Олег">
+                 <input class="contact last-inp" type="text" placeholder="oleg@mail.ru">
+                 <div class="label">Достоинства</div>
+                 <textarea class="area dignity" placeholder="Достоинства"></textarea>
+                 <div class="label">Недостатки</div>
+                 <textarea class="area dignity" placeholder="Недостатки"></textarea>
+                 <div class="label">Комментарий</div>
+                 <textarea class="area dignity last-area" placeholder="Комментарий"></textarea>
+            </form>
+
+            <div class="rating-wrapper">
+
+             <div class="price-rating">
+                <div class="price-description">Цена/качество</div>
+                <form class="rating">
+                    <input type="radio" id="star_5" name="star" value="5" />
+                    <label for="star_5"></label>
+                    <input type="radio" id="star_4" name="star" value="4" />
+                    <label for="star_4"></label>
+                    <input type="radio" id="star_3" name="star" value="3" />
+                    <label for="star_3"></label>
+                    <input type="radio" id="star_2" name="star" value="2" />
+                    <label for="star_2"></label>
+                    <input type="radio" id="star_1" name="star" value="1" />
+                    <label for="star_1"></label>
+                </form>
+            </div> 
+            <div class="photo-rating">
+                <div class="photo-description">Фотографии и описание товара</div>
+                <form class="rating-1">
+                    <input type="radio" id="star_5_1" name="star" value="5" />
+                    <label for="star_5_1"></label>
+                    <input type="radio" id="star_4_1" name="star" value="4" />
+                    <label for="star_4_1"></label>
+                    <input type="radio" id="star_3_1" name="star" value="3" />
+                    <label for="star_3_1"></label>
+                    <input type="radio" id="star_2_1" name="star" value="2" />
+                    <label for="star_2_1"></label>
+                    <input type="radio" id="star_1_1" name="star" value="1" />
+                    <label for="star_1_1"></label>
+                </form>
+            </div>    
+
+            <div class="managers-rating">
+                <div class="manager-job">Работа менеджеров</div>
+                <form class="rating-2">
+                    <input type="radio" id="star_5_2" name="star" value="5" />
+                    <label for="star_5_2"></label>
+                    <input type="radio" id="star_4_2" name="star" value="4" />
+                    <label for="star_4_2"></label>
+                    <input type="radio" id="star_3_2" name="star" value="3" />
+                    <label for="star_3_2"></label>
+                    <input type="radio" id="star_2_2" name="star" value="2" />
+                    <label for="star_2_2"></label>
+                    <input type="radio" id="star_1_2" name="star" value="1" />
+                    <label for="star_1_2"></label>
+                </form>
+            </div>
+
+            <div class="delivery-rating">
+                <div class="delivery-description">Доставка</div>
+                <form class="rating-3">
+                    <input type="radio" id="star_5_3" name="star" value="5" />
+                    <label for="star_5_3"></label>
+                    <input type="radio" id="star_4_3" name="star" value="4" />
+                    <label for="star_4_3"></label>
+                    <input type="radio" id="star_3_3" name="star" value="3" />
+                    <label for="star_3_3"></label>
+                    <input type="radio" id="star_2_3" name="star" value="2" />
+                    <label for="star_2_3"></label>
+                    <input type="radio_3" id="star_1_3" name="star" value="1" />
+                    <label for="star_1_3"></label>
+                </form>
+            </div>
+        </div>
+<!-- <form name="" method="post" action="#" enctype="multipart/form-data" class="feedback-form-1">   -->
+    <div class="label last-title">Добавьте фото</div>
+    <div class="last-title-description">(вы можете добавить максимум 10 фото)</div>
+    <div class="add-photo-wrapper">
+        <div class="add-ph add-photo-1 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+                <img id="image" src="#" alt="" />
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-2 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-3 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="mage-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-4 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-5 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-6 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-7 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-8 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-9 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+          <div class="add-ph add-photo-10 input-file-row-1">
+            <div class="form-group" id="image-preview">
+              <label class="label-1" id="image-label">
+                <i class="material-icons"><img src="img/galery.png"></i>
+                <span class="title">загрузить фото</span>
+                <input type="file" accept=".jfif,.jpg,.jpeg,.png,.gif" id="imgInput" name="files[] multiple">
+              </label>
+            </div>
+          </div>
+    </div>
+    <div class="send-form-btn">
+    <input form="main-form" class="form-send-btn send-btn-design" type="submit" value="Оставить отзыв">
+  </div>
+    </form>
+</div>
+            <div class="tabs__content active">
+              <div class="tab__information">
+                <div class="tab__information__items tab-title-pub">
+                    <div class="feedback-title">Отзывы о товаре:<div class="feedback-good"> &nbsp;Постельное бельё AlmaNia 2783WP Семейное</div></div>
+
+                    <div class="rating-feedback main-pub-rat">
+                        <div class="star_5_feed">★</div>
+                        <div class="star_4_feed">★</div>
+                        <div class="star_3_feed">★</div>
+                        <div class="star_2_feed">★</div>
+                        <div class="star_1_feed">★</div>
+                        <div class="pub-rating">(94% покупателей довольны товаром)</div>
+                    </div>
+
+
+                <div class="feedback-rating-wrapper top-rating-wrap">
+                    <div class="rating-feedback">
+                        <div class="pub-rating-1">Цена/качество:</div>
+                        <div class="rating-stars">
+                            <div class="star_5_feed pud-all">★</div>
+                            <div class="star_4_feed pud-all">★</div>
+                            <div class="star_3_feed pud-all">★</div>
+                            <div class="star_2_feed pud-all">★</div>
+                            <div class="star_1_feed pud-all star-laast">★</div>
+                        </div>
+                    </div>
+            
+
+                <div class="rating-feedback">
+                    <div class="pub-rating-1">Фотографии и описание товара:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-laast">☆</div>
+                    </div>
+                </div>
+
+                <div class="rating-feedback">
+                    <div class="pub-rating-1">Работа менеджеров:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-laast">★</div>
+                    </div>
+                </div>
+
+                <div class="rating-feedback last-rat">
+                    <div class="pub-rating-1">Доставка:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-last">★</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <!-- /.tab__information__items -->
+                <div class="tab__information__items tab__information--gradient">
+                       <div class="reviews-wrapper">
+                            <div class="review-item-1">
+                              <div class="review-item-header">
+                                <div class="review-item-1-left">
+                                <div class="review-name">
+                                    <div class="review-name-img">
+                                        <img src="img/valery.png" alt="">
+                                    </div>
+                                    <div class="review-img-descript-rate">
+                                        <div class="reviewer-name">Василий Петров</div>
+                                        <div class="rating-feedback main-pub-rat-name">
+                                            <div class="star_5_feed">★</div>
+                                            <div class="star_4_feed">★</div>
+                                            <div class="star_3_feed">★</div>
+                                            <div class="star_2_feed">★</div>
+                                            <div class="star_1_feed">★</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="review-item-1-right">
+                              <div class="date-time-wrap">
+                                <div class="date">
+                                    <img src="img/Calendar.png" alt="">
+                                    <time>12.06.2019</time>
+                                </div>
+                                <div class="time">
+                                    <img src="img/Clock.png" alt="">
+                                    <time>20:18</time>
+                                </div>
+                              </div>
+                              <div class="like-wrapp">
+                                <div class="review-helpfull">
+                                    Отзыв полезен?
+                                </div>
+                                <div class="like-wrapper">
+                                    <div class="like-count">3</div>
+                                    <a href="#" class="like">
+                                        <img src="img/like.png" alt="">
+                                    </a>
+                                    <a href="#" class="dislike">
+                                        <img src="img/dislike.png" alt="">
+                                    </a>
+                                    <div class="dislike-count">0</div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        
+                    <div class="comment-content">
+                        <div class="virtues-wrapper">
+                             <div class="virtues-title">
+                                Достоинсива:
+                             </div>
+                             <div class="virtues-text">
+                                Высокое качество, хорошая цена, быстрая доствка
+                             </div>
+                        </div>
+                        <div class="limitations-wrapper">
+                            <div class="limitations-title">
+                                Недостатки:
+                            </div>
+                            <div class="limitations-text">
+                                Не полное соответствие фото
+                            </div>
+                        </div>
+                        <div class="comment-wrapper">
+                            <div class="comment-title">
+                                Комментарий:
+                            </div>
+                            <div class="comment-text">
+                                Цвет немного ярче, чем на фото - в нашем случае 
+                                это оказалось только плюсом... Качество, отделка 
+                                отличное. Товар и упаковка без дефектов. Прикрепленное
+                                фото к сожалению, тоже не передает точность цвета.
+                            </div>
+                        </div>
+                        <!-- <div class="comment-img-wrapper">
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                          <div class="comment-img-item"></div>
+                       </div> -->
+                        <div class="feedback-rating-wrapper comment-rating-wrapper">
+                            <div class="rating-feedback coment-rating-feed">
+                                <div class="pub-rating-1">Цена/качество:</div>
+                                <div class="rating-stars">
+                                    <div class="star_5_feed pud-all">★</div>
+                                    <div class="star_4_feed pud-all">★</div>
+                                    <div class="star_3_feed pud-all">★</div>
+                                    <div class="star_2_feed pud-all">★</div>
+                                    <div class="star_1_feed pud-all star-laast">★</div>
+                                </div>
+                            </div>
+                    
+        
+                        <div class="rating-feedback coment-rating-feed">
+                            <div class="pub-rating-1">Фотографии и описание товара:</div>
+                            <div class="rating-stars">
+                                <div class="star_5_feed pud-all">★</div>
+                                <div class="star_4_feed pud-all">★</div>
+                                <div class="star_3_feed pud-all">★</div>
+                                <div class="star_2_feed pud-all">★</div>
+                                <div class="star_1_feed pud-all star-laast">☆</div>
+                            </div>
+                        </div>
+        
+                        <div class="rating-feedback coment-rating-feed">
+                            <div class="pub-rating-1">Работа менеджеров:</div>
+                            <div class="rating-stars">
+                                <div class="star_5_feed pud-all">★</div>
+                                <div class="star_4_feed pud-all">★</div>
+                                <div class="star_3_feed pud-all">★</div>
+                                <div class="star_2_feed pud-all">☆</div>
+                                <div class="star_1_feed pud-all star-laast">☆</div>
+                            </div>
+                        </div>
+        
+                        <div class="rating-feedback coment-rating-feed last-rat">
+                            <div class="pub-rating-1">Доставка:</div>
+                            <div class="rating-stars">
+                                <div class="star_5_feed pud-all">★</div>
+                                <div class="star_4_feed pud-all">★</div>
+                                <div class="star_3_feed pud-all">★</div>
+                                <div class="star_2_feed pud-all">★</div>
+                                <div class="star_1_feed pud-all star-last">★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two-link">
+                      <div class="answer">
+                         <a href="#">Ответить</a>
+                      </div>
+                      <div class="more-info">
+                          <a onclick="facechange('#block'); return false" href="#">Развернуть ответы</a>
+                      </div>
+                    </div>
+                </div>
+              </div>
+                    </div>
+                    <div id="block" class="inner more-answers">
+                      <div class="more-answer-item-wrapper">
+                      <div class="more-answer-item">
+                        <div class="review-item-header">
+                          <div class="review-item-1-left">
+                          <div class="review-name">
+                              <div class="review-name-img more-img">
+                                  <img src="img/irina.png" alt="">
+                              </div>
+                              <div class="review-img-descript-rate">
+                                  <div class="reviewer-name">Ирина</div>
+                                  <div class="rating-feedback main-pub-rat-name">
+                                      <div class="star_5_feed">★</div>
+                                      <div class="star_4_feed">★</div>
+                                      <div class="star_3_feed">★</div>
+                                      <div class="star_2_feed">★</div>
+                                      <div class="star_1_feed">★</div>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      <div class="review-item-1-right">
+                        <div class="date-time-wrap">
+                          <div class="date">
+                              <img src="img/Calendar.png" alt="">
+                              <time>12.06.2019</time>
+                          </div>
+                          <div class="time">
+                              <img src="img/Clock.png" alt="">
+                              <time>20:18</time>
+                          </div>
+                        </div>
+                        <div class="like-wrapp">
+                          <div class="review-helpfull">
+                              Отзыв полезен?
+                          </div>
+                          <div class="like-wrapper">
+                              <div class="like-count">3</div>
+                              <a href="#" class="like">
+                                  <img src="img/like.png" alt="">
+                              </a>
+                              <a href="#" class="dislike">
+                                  <img src="img/dislike.png" alt="">
+                              </a>
+                              <div class="dislike-count">0</div>
+                          </div>
+                        </div>
+                          </div>
+                      </div>
+                  <div class="more-answer-text">Очень скользкая ткань. Комплект пошит качественно, все достойно, но отличаются по цвету от фото.</div>
+                  <div class="two-link">
+                    <div class="answer more-answer-answer">
+                       <a href="#">Ответить</a>
+                    </div>
+                  </div>
+                      </div>
+                    </div>
+                    <div class="more-answer-item-wrapper">
+                      <div class="more-answer-item">
+                        <div class="review-item-header">
+                          <div class="review-item-1-left">
+                          <div class="review-name">
+                              <div class="review-name-img more-img">
+                                  <img src="img/Oleg.png" alt="">
+                              </div>
+                              <div class="review-img-descript-rate">
+                                  <div class="reviewer-name">Олег Степанович</div>
+                                  <div class="rating-feedback main-pub-rat-name">
+                                      <div class="star_5_feed">★</div>
+                                      <div class="star_4_feed">★</div>
+                                      <div class="star_3_feed">★</div>
+                                      <div class="star_2_feed">★</div>
+                                      <div class="star_1_feed">★</div>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      <div class="review-item-1-right">
+                        <div class="date-time-wrap">
+                          <div class="date">
+                              <img src="img/Calendar.png" alt="">
+                              <time>12.06.2019</time>
+                          </div>
+                          <div class="time">
+                              <img src="img/Clock.png" alt="">
+                              <time>20:18</time>
+                          </div>
+                        </div>
+                        <div class="like-wrapp">
+                          <div class="review-helpfull">
+                              Отзыв полезен?
+                          </div>
+                          <div class="like-wrapper">
+                              <div class="like-count">3</div>
+                              <a href="#" class="like">
+                                  <img src="img/like.png" alt="">
+                              </a>
+                              <a href="#" class="dislike">
+                                  <img src="img/dislike.png" alt="">
+                              </a>
+                              <div class="dislike-count">0</div>
+                          </div>
+                        </div>
+                          </div>
+                      </div>
+                  <div class="more-answer-text">Добрый день, заказала по скидке, и была очень довольна покупкой. Оказалось один в один как на картинке. Но, голубая окраска очень бледная. Немного насыщенного голубого цвета и будет просто супер. Качество замечательное!</div>
+                  <div class="two-link">
+                    <div class="answer more-answer-answer">
+                       <a href="#">Ответить</a>
+                    </div>
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-item-2">
+                    <div class="review-item-header">
+                      <div class="review-item-1-left">
+                      <div class="review-name">
+                          <div class="review-name-img">
+                              <img src="img/default.png" alt="">
+                          </div>
+                          <div class="review-img-descript-rate">
+                              <div class="reviewer-name">Валерия</div>
+                              <div class="rating-feedback main-pub-rat-name">
+                                  <div class="star_5_feed">★</div>
+                                  <div class="star_4_feed">★</div>
+                                  <div class="star_3_feed">★</div>
+                                  <div class="star_2_feed">★</div>
+                                  <div class="star_1_feed">★</div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                  <div class="review-item-1-right">
+                    <div class="date-time-wrap">
+                      <div class="date">
+                          <img src="img/Calendar.png" alt="">
+                          <time>12.06.2019</time>
+                      </div>
+                      <div class="time">
+                          <img src="img/Clock.png" alt="">
+                          <time>20:18</time>
+                      </div>
+                    </div>
+                    <div class="like-wrapp">
+                      <div class="review-helpfull">
+                          Отзыв полезен?
+                      </div>
+                      <div class="like-wrapper">
+                          <div class="like-count">3</div>
+                          <a href="#" class="like">
+                              <img src="img/like.png" alt="">
+                          </a>
+                          <a href="#" class="dislike">
+                              <img src="img/dislike.png" alt="">
+                          </a>
+                          <div class="dislike-count">0</div>
+                      </div>
+                    </div>
+                      </div>
+                  </div>
+            <div class="comment-content">
+                <div class="virtues-wrapper">
+                     <div class="virtues-title">
+                        Достоинсива:
+                     </div>
+                     <div class="virtues-text">
+                      Высокое качество, хорошая цена, быстрая доствка
+                     </div>
+                </div>
+                <div class="limitations-wrapper">
+                    <div class="limitations-title">
+                        Недостатки:
+                    </div>
+                    <div class="limitations-text">
+                      Не полное соответствие фото
+                    </div>
+                </div>
+                <div class="comment-wrapper comment-img-wr">
+                    <div class="comment-title">
+                        Комментарий:
+                    </div>
+                    <div class="comment-text">
+                      Цвет немного ярче, чем на фото - в нашем случае 
+                      это оказалось только плюсом... Качество, отделка 
+                      отличное. Товар и упаковка без дефектов. Прикрепленное 
+                      фото к сожалению, тоже не передает точность цвета.
+                    </div>
+                </div>
+                <div class="comment-img-wrapper">
+                  <div class="comment-img-item">
+                    <img src="img/com-1.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-2.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-3.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-4.png" alt="">
+                  </div>
+
+                  
+                  <div class="comment-img-item">
+                    <img src="img/com-5.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-6.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-7.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-8.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-9.png" alt="">
+                  </div>
+                  <div class="comment-img-item">
+                    <img src="img/com-10.png" alt="">
+                  </div>
+               </div>
+                <div class="feedback-rating-wrapper comment-rating-wrapper">
+                    <div class="rating-feedback coment-rating-feed">
+                        <div class="pub-rating-1">Цена/качество:</div>
+                        <div class="rating-stars">
+                            <div class="star_5_feed pud-all">★</div>
+                            <div class="star_4_feed pud-all">★</div>
+                            <div class="star_3_feed pud-all">★</div>
+                            <div class="star_2_feed pud-all">★</div>
+                            <div class="star_1_feed pud-all star-laast">★</div>
+                        </div>
+                    </div>
+            
+
+                <div class="rating-feedback coment-rating-feed">
+                    <div class="pub-rating-1">Фотографии и описание товара:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-laast">☆</div>
+                    </div>
+                </div>
+
+                <div class="rating-feedback coment-rating-feed">
+                    <div class="pub-rating-1">Работа менеджеров:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-laast">★</div>
+                    </div>
+                </div>
+
+                <div class="rating-feedback coment-rating-feed last-rat">
+                    <div class="pub-rating-1">Доставка:</div>
+                    <div class="rating-stars">
+                        <div class="star_5_feed pud-all">★</div>
+                        <div class="star_4_feed pud-all">★</div>
+                        <div class="star_3_feed pud-all">★</div>
+                        <div class="star_2_feed pud-all">★</div>
+                        <div class="star_1_feed pud-all star-last">★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="two-link">
+              <div class="answer">
+                 <a href="#">Ответить</a>
+              </div>
+              <div class="more-info">
+                  <a onclick="facechange('#block-2'); return false" href="#">Развернуть ответы</a>
+              </div>
+            </div>
+        </div>
+            </div>
+            <div id="block-2" class="inner more-answers">
+              <div class="more-answer-item-wrapper">
+              <div class="more-answer-item">
+                <div class="review-item-header">
+                  <div class="review-item-1-left">
+                  <div class="review-name">
+                      <div class="review-name-img more-img">
+                          <img src="img/irina.png" alt="">
+                      </div>
+                      <div class="review-img-descript-rate">
+                          <div class="reviewer-name">Ирина</div>
+                          <div class="rating-feedback main-pub-rat-name">
+                              <div class="star_5_feed">★</div>
+                              <div class="star_4_feed">★</div>
+                              <div class="star_3_feed">★</div>
+                              <div class="star_2_feed">★</div>
+                              <div class="star_1_feed">★</div>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+              <div class="review-item-1-right">
+                <div class="date-time-wrap">
+                  <div class="date">
+                      <img src="img/Calendar.png" alt="">
+                      <time>12.06.2019</time>
+                  </div>
+                  <div class="time">
+                      <img src="img/Clock.png" alt="">
+                      <time>20:18</time>
+                  </div>
+                </div>
+                <div class="like-wrapp">
+                  <div class="review-helpfull">
+                      Отзыв полезен?
+                  </div>
+                  <div class="like-wrapper">
+                      <div class="like-count">3</div>
+                      <a href="#" class="like">
+                          <img src="img/like.png" alt="">
+                      </a>
+                      <a href="#" class="dislike">
+                          <img src="img/dislike.png" alt="">
+                      </a>
+                      <div class="dislike-count">0</div>
+                  </div>
+                </div>
+                  </div>
+              </div>
+          <div class="more-answer-text">Очень скользкая ткань. Комплект пошит качественно, все достойно, но отличаются по цвету от фото.</div>
+          <div class="two-link">
+            <div class="answer more-answer-answer">
+               <a href="#">Ответить</a> 
+            </div>
+          </div>
+              </div>
+            </div>
+            <div class="more-answer-item-wrapper">
+              <div class="more-answer-item">
+                <div class="review-item-header">
+                  <div class="review-item-1-left">
+                  <div class="review-name">
+                      <div class="review-name-img more-img">
+                          <img src="img/Oleg.png" alt="">
+                      </div>
+                      <div class="review-img-descript-rate">
+                          <div class="reviewer-name">Олег Степанович</div>
+                          <div class="rating-feedback main-pub-rat-name">
+                              <div class="star_5_feed">★</div>
+                              <div class="star_4_feed">★</div>
+                              <div class="star_3_feed">★</div>
+                              <div class="star_2_feed">★</div>
+                              <div class="star_1_feed">★</div>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+              <div class="review-item-1-right">
+                <div class="date-time-wrap">
+                  <div class="date">
+                      <img src="img/Calendar.png" alt="">
+                      <time>12.06.2019</time>
+                  </div>
+                  <div class="time">
+                      <img src="img/Clock.png" alt="">
+                      <time>20:18</time>
+                  </div>
+                </div>
+                <div class="like-wrapp">
+                  <div class="review-helpfull">
+                      Отзыв полезен?
+                  </div>
+                  <div class="like-wrapper">
+                      <div class="like-count">3</div>
+                      <a href="#" class="like">
+                          <img src="img/like.png" alt="">
+                      </a>
+                      <a href="#" class="dislike">
+                          <img src="img/dislike.png" alt="">
+                      </a>
+                      <div class="dislike-count">0</div>
+                  </div>
+                </div>
+                  </div>
+              </div>
+          <div class="more-answer-text">Добрый день, заказала по скидке, и была очень довольна покупкой. Оказалось один в один как на картинке. Но, голубая окраска очень бледная. Немного насыщенного голубого цвета и будет просто супер. Качество замечательное!</div>
+          <div class="two-link">
+            <div class="answer more-answer-answer">
+               <a href="#">Ответить</a> 
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-item-3">
+            <div class="review-item-header">
+              <div class="review-item-1-left">
+              <div class="review-name">
+                  <div class="review-name-img">
+                      <img src="img/irina_iv.png" alt="">
+                  </div>
+                  <div class="review-img-descript-rate">
+                      <div class="reviewer-name">Ирина Ивановна</div>
+                      <div class="rating-feedback main-pub-rat-name">
+                          <div class="star_5_feed">★</div>
+                          <div class="star_4_feed">★</div>
+                          <div class="star_3_feed">★</div>
+                          <div class="star_2_feed">★</div>
+                          <div class="star_1_feed">★</div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          <div class="review-item-1-right">
+            <div class="date-time-wrap">
+              <div class="date">
+                  <img src="img/Calendar.png" alt="">
+                  <time>12.06.2019</time>
+              </div>
+              <div class="time">
+                  <img src="img/Clock.png" alt="">
+                  <time>20:18</time>
+              </div>
+            </div>
+            <div class="like-wrapp">
+              <div class="review-helpfull">
+                  Отзыв полезен?
+              </div>
+              <div class="like-wrapper">
+                  <div class="like-count">3</div>
+                  <a href="#" class="like">
+                      <img src="img/like.png" alt="">
+                  </a>
+                  <a href="#" class="dislike">
+                      <img src="img/dislike.png" alt="">
+                  </a>
+                  <div class="dislike-count">0</div>
+              </div>
+            </div>
+              </div>
+          </div>
+    <div class="comment-content">
+        <div class="virtues-wrapper">
+             <div class="virtues-title">
+                Достоинсива:
+             </div>
+             <div class="virtues-text">
+                Высокое качество, хорошая цена, быстрая доствка
+             </div>
+        </div>
+        <div class="limitations-wrapper">
+            <div class="limitations-title">
+                Недостатки:
+            </div>
+            <div class="limitations-text">
+                Не полное соответствие фото
+            </div>
+        </div>
+        <div class="comment-wrapper">
+            <div class="comment-title">
+                Комментарий:
+            </div>
+            <div class="comment-text">
+                Цвет немного ярче, чем на фото - в нашем случае 
+                это оказалось только плюсом... Качество, отделка 
+                отличное. Товар и упаковка без дефектов. Прикрепленное
+                фото к сожалению, тоже не передает точность цвета.
+            </div>
+        </div>
+        <!-- <div class="comment-img-wrapper">
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+           <div class="comment-img-item"></div>
+        </div> -->
+        <div class="feedback-rating-wrapper comment-rating-wrapper">
+            <div class="rating-feedback coment-rating-feed">
+                <div class="pub-rating-1">Цена/качество:</div>
+                <div class="rating-stars">
+                <div class="star_5_feed pud-all">★</div>
+                <div class="star_4_feed pud-all">★</div>
+                <div class="star_3_feed pud-all">★</div>
+                <div class="star_2_feed pud-all">★</div>
+                <div class="star_1_feed pud-all star-laast">★</div>
+              </div>
+            </div>
+    
+
+        <div class="rating-feedback coment-rating-feed">
+            <div class="pub-rating-1">Фотографии и описание товара:</div>
+            <div class="rating-stars">
+            <div class="star_5_feed pud-all">★</div>
+            <div class="star_4_feed pud-all">★</div>
+            <div class="star_3_feed pud-all">★</div>
+            <div class="star_2_feed pud-all">★</div>
+            <div class="star_1_feed pud-all star-laast">☆</div>
+          </div>
+        </div>
+
+        <div class="rating-feedback coment-rating-feed">
+            <div class="pub-rating-1">Работа менеджеров:</div>
+            <div class="rating-stars">
+            <div class="star_5_feed pud-all">★</div>
+            <div class="star_4_feed pud-all">★</div>
+            <div class="star_3_feed pud-all">★</div>
+            <div class="star_2_feed pud-all">★</div>
+            <div class="star_1_feed pud-all star-laast">★</div>
+          </div>
+        </div>
+
+        <div class="rating-feedback coment-rating-feed last-rat">
+            <div class="pub-rating-1">Доставка:</div>
+            <div class="rating-stars">
+            <div class="star_5_feed pud-all">★</div>
+            <div class="star_4_feed pud-all">★</div>
+            <div class="star_3_feed pud-all">★</div>
+            <div class="star_2_feed pud-all">★</div>
+            <div class="star_1_feed pud-all star-last">★</div>
+          </div>
+        </div>
+    </div>
+    <div class="two-link">
+      <div class="answer">
+         <a href="#">Ответить</a>
+      </div>
+      <div class="more-info">
+          <a onclick="facechange('#block-3'); return false" href="#">Развернуть ответы</a>
+      </div>
+    </div>
+</div>
+    </div>
+    <div id="block-3" class="inner more-answers">
+      <div class="more-answer-item-wrapper">
+      <div class="more-answer-item">
+        <div class="review-item-header">
+          <div class="review-item-1-left more-answer-1">
+          <div class="review-name">
+              <div class="review-name-img more-img">
+                  <img src="img/irina.png" alt="">
+              </div>
+              <div class="review-img-descript-rate">
+                  <div class="reviewer-name more-answer-name">Ирина</div>
+              </div>
+          </div>
+          </div>
+          <div class="like-wrapp">
+            <div class="review-item-1-right">
+              <div class="date-time-wrap">
+                <div class="date">
+                    <img src="img/Calendar.png" alt="">
+                    <time>12.06.2019</time>
+                </div>
+                <div class="time">
+                    <img src="img/Clock.png" alt="">
+                    <time>20:18</time>
+                </div>
+              </div>
+              <div class="like-wrapp">
+                <div class="review-helpfull">
+                    Отзыв полезен?
+                </div>
+                <div class="like-wrapper">
+                    <div class="like-count">3</div>
+                    <a href="#" class="like">
+                        <img src="img/like.png" alt="">
+                    </a>
+                    <a href="#" class="dislike">
+                        <img src="img/dislike.png" alt="">
+                    </a>
+                    <div class="dislike-count">0</div>
+                </div>
+              </div>
+                </div>
+      </div>
+  </div>
+  <div class="more-answer-text">Очень скользкая ткань. Комплект пошит качественно, все достойно, но отличаются по цвету от фото.</div>
+  <div class="two-link">
+    <div class="answer more-answer-answer">
+       <a href="#">Ответить</a> 
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="more-answer-item-wrapper">
+      <div class="more-answer-item">
+        <div class="review-item-header">
+          <div class="review-item-1-left">
+          <div class="review-name">
+              <div class="review-name-img more-img">
+                  <img src="img/Oleg.png" alt="">
+              </div>
+              <div class="review-img-descript-rate">
+                  <div class="reviewer-name">Олег Степанович</div>
+                  <div class="rating-feedback main-pub-rat-name">
+                      <div class="star_5_feed">★</div>
+                      <div class="star_4_feed">★</div>
+                      <div class="star_3_feed">★</div>
+                      <div class="star_2_feed">★</div>
+                      <div class="star_1_feed">★</div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      <div class="review-item-1-right">
+        <div class="date-time-wrap">
+          <div class="date">
+              <img src="img/Calendar.png" alt="">
+              <time>12.06.2019</time>
+          </div>
+          <div class="time">
+              <img src="img/Clock.png" alt="">
+              <time>20:18</time>
+          </div>
+        </div>
+        <div class="like-wrapp">
+          <div class="review-helpfull">
+              Отзыв полезен?
+          </div>
+          <div class="like-wrapper">
+              <div class="like-count">3</div>
+              <a href="#" class="like">
+                  <img src="img/like.png" alt="">
+              </a>
+              <a href="#" class="dislike">
+                  <img src="img/dislike.png" alt="">
+              </a>
+              <div class="dislike-count">0</div>
+          </div>
+        </div>
+          </div>
+      </div>
+  <div class="more-answer-text">Очень скользкая ткань. Комплект пошит качественно, все достойно, но отличаются по цвету от фото.</div>
+  <div class="two-link">
+    <div class="answer more-answer-answer">
+       <a href="#">Ответить</a>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+                 </div>
+                       </div>
+                </div>
+              </div>
+              <!-- /.tab__information -->
+            <div class="tabs__content non-active">
+                <div class="tab__information">
+                  <div class="tab__information__items question-info">
+                      <div class="question-wrapper">
+                          <div class="question-item">
+                            <div class="review-item-1-left">
+                              <div class="review-name">
+                                  <div class="review-name-img">
+                                      <img src="img/petrov.png" alt="">
+                                  </div>
+                                  <div class="review-img-descript-rate">
+                                      <div class="reviewer-name">Василий Петров</div>
+                                  </div>
+                              </div>
+                              <div class="time-date-wrap">
+                              <div class="date">
+                                  <img src="img/Calendar.png" alt="">
+                                  <time>12.06.2019</time>
+                              </div>
+                              <div class="time">
+                                  <img src="img/Clock.png" alt="">
+                                  <time>20:18</time>
+                              </div>
+                            </div>
+                              </div>
+                              <div class="question-text">
+                                Какие характеристики материала перкаль?
+                              </div>
+                          </div>
+                          <div class="more-answer-item-wrapper">
+                            <div class="more-answer-item">
+                              <div class="review-item-header question-header">
+                                <div class="review-item-1-left more-answer-1">
+                                <div class="review-name">
+                                    <div class="review-name-img more-img">
+                                        <img src="img/brand.png" alt="">
+                                    </div>
+                                    <div class="review-img-descript-rate">
+                                        <div class="reviewer-name more-answer-name">Представитель бренда</div>
+                                    </div>
+                                </div>
+                                <div class="time-date-wrap">
+                                <div class="date">
+                                    <img src="img/Calendar.png" alt="">
+                                    <time>12.06.2019</time>
+                                </div>
+                                <div class="time">
+                                    <img src="img/Clock.png" alt="">
+                                    <time>20:18</time>
+                                </div>
+                              </div>
+                                </div>
+                        </div>
+                        <div class="more-answer-text question-description">Перкаль (Percale) изготавливают особым, крестообразным плетением длинных, некрученых волокон, благодаря чему ткань получается очень плотной, с гладкой, приятной на ощупь. При этом она тонкая и легкая, так как соткана из тонких и средних номеров нитей.</div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab__information__items question-info">
+                    <div class="question-wrapper">
+                        <div class="question-item">
+                          <div class="review-item-1-left">
+                            <div class="review-name">
+                                <div class="review-name-img">
+                                    <img src="img/leonid.png" alt="">
+                                </div>
+                                <div class="review-img-descript-rate">
+                                    <div class="reviewer-name">Леонид</div>
+                                </div>
+                            </div>
+                            <div class="time-date-wrap">
+                            <div class="date">
+                                <img src="img/Calendar.png" alt="">
+                                <time>12.06.2019</time>
+                            </div>
+                            <div class="time">
+                                <img src="img/Clock.png" alt="">
+                                <time>20:18</time>
+                            </div>
+                          </div>
+                            </div>
+                            <div class="question-text">
+                              При каких оборотах допускается машинная стирка?
+                            </div>
+                        </div>
+                        <div class="more-answer-item-wrapper">
+                          <div class="more-answer-item">
+                            <div class="review-item-header question-header">
+                              <div class="review-item-1-left more-answer-1">
+                              <div class="review-name">
+                                  <div class="review-name-img more-img">
+                                      <img src="img/brand.png" alt="">
+                                  </div>
+                                  <div class="review-img-descript-rate">
+                                      <div class="reviewer-name more-answer-name">Представитель бренда</div>
+                                  </div>
+                              </div>
+                              <div class="time-date-wrap">
+                              <div class="date">
+                                  <img src="img/Calendar.png" alt="">
+                                  <time>12.06.2019</time>
+                              </div>
+                              <div class="time">
+                                  <img src="img/Clock.png" alt="">
+                                  <time>20:18</time>
+                              </div>
+                            </div>
+                              </div>
+                      </div>
+                      <div class="more-answer-text question-description">Отжим цветного белья  производится 
+                        при оборотах не больше 800, иначе будут образовываться заломы 
+                        и вымываться краситель. Также следует строго соблюдать температурный режим.
+                        Для продления срока службы постельного белья его необходимо менять раз в неделю 
+                        в летний период и раз в две недели в зимний, а при стирке использовать деликатный режим.</div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab__information__items question-info">
+                  <div class="question-wrapper">
+                      <div class="question-item">
+                        <div class="review-item-1-left">
+                          <div class="review-name">
+                              <div class="review-name-img">
+                                  <img src="img/olesya.png" alt="">
+                              </div>
+                              <div class="review-img-descript-rate">
+                                  <div class="reviewer-name">Олеся</div>
+                              </div>
+                          </div>
+                          <div class="time-date-wrap">
+                          <div class="date">
+                              <img src="img/Calendar.png" alt="">
+                              <time>12.06.2019</time>
+                          </div>
+                          <div class="time">
+                              <img src="img/Clock.png" alt="">
+                              <time>20:18</time>
+                          </div>
+                        </div>
+                          </div>
+                          <div class="question-text">
+                            Какие характеристики материала перкаль?
+                          </div>
+                      </div>
+                      <div class="more-answer-item-wrapper">
+                        <div class="more-answer-item">
+                          <div class="review-item-header question-header">
+                            <div class="review-item-1-left more-answer-1">
+                            <div class="review-name">
+                                <div class="review-name-img more-img">
+                                    <img src="img/brand.png" alt="">
+                                </div>
+                                <div class="review-img-descript-rate">
+                                    <div class="reviewer-name more-answer-name">Представитель бренда</div>
+                                </div>
+                            </div>
+                            <div class="time-date-wrap">
+                            <div class="date">
+                                <img src="img/Calendar.png" alt="">
+                                <time>12.06.2019</time>
+                            </div>
+                            <div class="time">
+                                <img src="img/Clock.png" alt="">
+                                <time>20:18</time>
+                            </div>
+                          </div>
+                            </div>
+                    </div>
+                    <div class="more-answer-text question-description">Перкаль (Percale) изготавливают особым, крестообразным плетением длинных, некрученых волокон, благодаря чему ткань получается очень плотной, с гладкой, приятной на ощупь. При этом она тонкая и легкая, так как соткана из тонких и средних номеров нитей.</div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+                  <!-- /.tab__information__items -->
+                </div>
+                <!-- /tab__information -->
+              </div>
+          </div>
+          <!-- .tabs -->
+    </section>
+</body>
+</html>
